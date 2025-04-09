@@ -14,7 +14,17 @@ bool isValidCharInput(const string& input) {
 
 // Функция ввода первого символа
 void enterChar1() {
-    // Разрабатывается Developer1 - ветка branch_fun_1
+    string input;
+    cout << "Введите первый символ: ";
+    getline(cin, input);
+    
+    while (!isValidCharInput(input)) {
+        cout << "Ошибка! Введите ровно один символ: ";
+        getline(cin, input);
+    }
+    
+    ch1 = input[0];
+    cout << "Первый символ сохранен: " << ch1 << endl;
 }
 
 // Функция ввода второго символа
