@@ -54,7 +54,13 @@ void printCharsAndCodes() {
 
 // Функция вывода суммы кодов ASCII
 void printSumOfCodes() {
-    // Разрабатывается Developer4 - ветка branch_fun_4
+    if (ch1 == '\0' || ch2 == '\0') {
+        cout << "Ошибка! Сначала введите оба символа." << endl;
+        return;
+    }
+    
+    int sum = static_cast<int>(ch1) + static_cast<int>(ch2);
+    cout << "Сумма кодов ASCII: " << sum << endl;
 }
 
 // Структура пункта меню
