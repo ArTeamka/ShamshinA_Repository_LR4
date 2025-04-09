@@ -19,9 +19,18 @@ void enterChar1() {
 
 // Функция ввода второго символа
 void enterChar2() {
-    // Разрабатывается Developer2 - ветка branch_fun_2
+    string input;
+    cout << "Введите второй символ: ";
+    getline(cin, input);
+    
+    while (!isValidCharInput(input)) {
+        cout << "Ошибка! Введите ровно один символ: ";
+        getline(cin, input);
+    }
+    
+    ch2 = input[0];
+    cout << "Второй символ сохранен: " << ch2 << endl;
 }
-
 // Функция вывода символов и их кодов ASCII
 void printCharsAndCodes() {
     // Разрабатывается Developer3 - ветка branch_fun_3
