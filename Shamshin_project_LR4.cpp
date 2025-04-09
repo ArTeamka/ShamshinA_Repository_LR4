@@ -43,7 +43,13 @@ void enterChar2() {
 }
 // Функция вывода символов и их кодов ASCII
 void printCharsAndCodes() {
-    // Разрабатывается Developer3 - ветка branch_fun_3
+    if (ch1 == '\0' || ch2 == '\0') {
+        cout << "Ошибка! Сначала введите оба символа." << endl;
+        return;
+    }
+    
+    cout << "Символ 1: " << ch1 << " (код ASCII: " << static_cast<int>(ch1) << ")" << endl;
+    cout << "Символ 2: " << ch2 << " (код ASCII: " << static_cast<int>(ch2) << ")" << endl;
 }
 
 // Функция вывода суммы кодов ASCII
